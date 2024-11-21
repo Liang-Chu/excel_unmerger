@@ -26,3 +26,7 @@ Processing file: [UNLOADING_PLAN.xlsx](http://_vscodecontentref_/2)
 Saved unmerged file as [unmerged_UNLOADING_PLAN.xlsx](http://_vscodecontentref_/3)
 Press Enter to process the next file or close the program to exit...
 ```
+Before:
+![image](https://github.com/user-attachments/assets/6da1817c-25d6-4647-b671-38d1e41c4209)
+After:
+![image](https://github.com/user-attachments/assets/686fcd8c-96c5-4fdb-9e81-b1db386e929b)
