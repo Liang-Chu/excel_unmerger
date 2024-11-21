@@ -2,14 +2,13 @@
 
 ## Overview
 The Excel Unmerger script processes Excel files to unmerge cells while preserving the original cell styles and values. It can ignore a specified number of rows and columns during the unmerging process.
-
 ## Features
 - Unmerges cells in Excel files (.xlsx, .xls, .xlsm, .xlsb)
 - Preserves cell styles and values
 - Allows ignoring specified rows and columns
 
 ## Usage
-1. Place all the excel (xlsx,xls,xlsm,xlsb) files needed to be unmerged in the same directory as the script.
+1. Place all the Excel files (xlsx, xls, xlsm, xlsb) that need to be unmerged in the same directory as the script. It is recommended to create a separate directory that only contains the script, and move the Excel files into this folder when you need to process them.
 2. Run the script.
 3. Follow the prompts to:
    - Confirm the files to be processed.
