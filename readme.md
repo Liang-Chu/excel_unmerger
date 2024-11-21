@@ -29,4 +29,4 @@ Press Enter to process the next file or close the program to exit...
 Before:
 ![image](https://github.com/user-attachments/assets/6da1817c-25d6-4647-b671-38d1e41c4209)
 After:
-![image](https://github.com/user-attachments/assets/686fcd8c-96c5-4fdb-9e81-b1db386e929b)
+![image](https://github.com/user-attachments/assets/7943d0c6-af7c-4f5c-868e-9e6e7b4add4b)
