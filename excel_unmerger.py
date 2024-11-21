@@ -1,18 +1,23 @@
 import os
+import warnings
 from openpyxl import load_workbook
 from openpyxl.utils import range_boundaries
+from copy import copy
+
+# Suppress specific UserWarning
+warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl.worksheet._reader")
 
 def list_excel_files():
     files = [f for f in os.listdir() if f.endswith(('.xlsx', '.xls', '.xlsm', '.xlsb')) and not f.startswith('unmerged_') and not f.startswith('~$')]
     return files
 
 def copy_style(source_cell, target_cell):
-    target_cell.font = source_cell.font.copy()
-    target_cell.border = source_cell.border.copy()
-    target_cell.fill = source_cell.fill.copy()
+    target_cell.font = copy(source_cell.font)
+    target_cell.border = copy(source_cell.border)
+    target_cell.fill = copy(source_cell.fill)
     target_cell.number_format = source_cell.number_format
-    target_cell.protection = source_cell.protection.copy()
-    target_cell.alignment = source_cell.alignment.copy()
+    target_cell.protection = copy(source_cell.protection)
+    target_cell.alignment = copy(source_cell.alignment)
 
 def unmerge_cells(file_path, ignore_rows=0, ignore_cols=0):
     wb = load_workbook(file_path)
@@ -56,8 +61,8 @@ def main():
             try:
                 unmerge_cells(file, ignore_rows, ignore_cols)
             except Exception as e:
-                print(f"Failed to process {file}: {e}")
-        
+                print(f"Failed to process {file}")
+
         input("Press Enter to process the next file or close the program to exit...")
 
 if __name__ == "__main__":
